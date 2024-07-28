@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotels</title>
+  <link rel="stylesheet" href="../css/hotel.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="../images/logo.png" alt="Logo">
+    </a>
+
+    <nav class="navbar">
+      <a href="../index.html">Home</a>
+      <a href="tripitinerary.html">Trip Itinerary</a>
+      <a href="hotel.html" class="active">Hotels</a>
+      <a href="thingstoDo.html">Things To Do</a>
+      <a href="placestovisit.html">Places To Visit</a>
+      <a href="events.html">Events</a>
+      <a href="shopping.html">Shopping</a>
+      <a href="restaurants.html">Restaurants</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Here is a list of our hotels that we have booked.</h2>
+    </section>
+    
+    <div class="container">
+      <div class="card">
+        <div class="slider slideshow__container js-slideshow">
+          <img v-for="(slide, index) in slides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
+        </div>
+
+        <div class="content">
+          <div class="description">
+            <h1>QAWRA Palace Resort & SPA</h1>
+            <p>
+              Overlooking Salina Bay,the hotel has its own indoor and outdoor swimming pools. It also features a mini golf course and a games room with pool table.
+              Breakfast at the Qawra Palace is buffet style and includes both sweet and savoury items such as eggs, sausages and cereal. The restaurant serves international
+              cuisine at lunch and dinner.
+            </p>
+            <p>
+              This 4-star hotel is 25 metres from the nearest bus stop and 700 metres from Bugibba centre. St. Julian's is 10 minutes' drive away.
+            </p>
+
+            <h3>Features</h3>
+            <ul>
+              <li>3 swimming pools</li>
+              <li>Spa and wellness facilities</li>
+              <li>By the beach</li>
+              <li>Very good breakfast</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/hotel.js"></script>
+</body>
+</html>

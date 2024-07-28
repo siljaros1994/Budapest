@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="images/logo.png" alt="">
+    </a>
+
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="pages/tripitinerary.html">Trip Itinerary</a>
+      <a href="pages/hotel.html">Hotels</a>
+      <a href="pages/thingstoDo.html">Things To Do</a>
+      <a href="pages/placestovisit.html">Places To Visit</a>
+      <a href="pages/events.html">Events</a>
+      <a href="pages/shopping.html">Shoping</a>
+      <a href="pages/restaurants.html">Restaurants</a>
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-search" id="search-btn"></div>
+      <div class="fas fa-shopping-cart" id="cart-btn"></div>
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Cart items will be injected here dynamically -->
+      <div id="cart-total" class="cart-total">
+        <h3>Total: €<span id="total-price">0.00</span></h3>
+      </div>
+      <button id="button" class="ready" onclick="clickButton();">
+        <div class="message submitMessage">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 12.2">
+            <polyline stroke="currentColor" points="2,7.1 6.5,11.1 11,7.1 "/>
+            <line stroke="currentColor" x1="6.5" y1="1.2" x2="6.5" y2="10.3"/>
+          </svg> <span class="button-text">Checkout Now</span>
+        </div>
+        <div class="message loadingMessage">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+            <circle class="loadingCircle" cx="2.2" cy="10" r="1.6"/>
+            <circle class="loadingCircle" cx="9.5" cy="10" r="1.6"/>
+            <circle class="loadingCircle" cx="16.8" cy="10" r="1.6"/>
+          </svg>
+        </div>
+        <div class="message successMessage">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+            <polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 "/>
+          </svg> <span class="button-text">Success</span>
+        </div>
+      </button>
+
+      <canvas id="canvas"></canvas>
+    </div>
+  </header>
+
+  <section class="home" id="home">
+    <div class="content">
+        <h3>Our Travel </h3>
+        <p>Here is where you can find everything about our trip to Malta this sumer.</p>
+    </div>
+  </section>
+
+  <section class="tripitinerary" id="tripitinerary">
+    <h1 class="heading"> <span>Flight</span> Information </h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="images/cool-plane.jpg" alt="tripitinerary">
+        </div>
+
+        <div class="content">
+            <h3>Here can we see all about our flight.</h3>
+            <p>Click the button below to view detailed information on our flight times and the airlines we are using. We will be flying with Icelandair, Wizz Air, and Air Malta. Safe travels!</p>
+            <a href="pages/tripitinerary.html" class="btn">check it out</a>
+        </div>
+    </div>
+  </section>
+
+  <section class="hotel" id="hotel">
+    <h1 class="heading"> Here are <span>Our Hotels</span> </h1>
+
+    <div class="row">
+      <div class="image">
+          <img src="images/hotel.jpg" alt="hotel">
+      </div>
+
+      <div class="content">
+          <h3>Here you can see everything about our accommodations</h3>
+          <p>Click the button below to get information about our hotels. We will be staying at different hotels during our trip. Enjoy your stay!</p>
+          <a href="pages/hotel.html" class="btn">check it out</a>
+      </div>
+  </div>
+  </section>
+
+  <section class="thingstoDo" id="thingstoDo">
+    <h1 class="heading"> Things To Do<span> See price</span></h1>
+    <div class="box-container">
+  
+      <div class="box">
+        <div class="icons">
+          <a href="#" class="fas fa-shopping-cart add-to-cart" data-name="Cocktail Bar" data-price="0.00" data-image="images/cocktail.png"></a>
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="images/cocktail.png" alt="thingstoDo">
+        </div>
+        <div class="content">
+          <h3>Cocktail Bar</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">€ 0.00</div>
+        </div>
+      </div>
+  
+      <div class="box">
+        <div class="icons">
+          <a href="#" class="fas fa-shopping-cart add-to-cart" data-name="Quad Bike" data-price="115.00" data-image="images/bike.jpg"></a>
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="images/bike.jpg" alt="thingstoDo">
+        </div>
+        <div class="content">
+          <h3>Quad Bike</h3>
+          <h4>with Lunch and Boat Ride</h4>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">€115.00</div>
+        </div>
+      </div>
+  
+      <div class="box">
+        <div class="icons">
+          <a href="#" class="fas fa-shopping-cart add-to-cart" data-name="Boat Trip" data-price="25.00" data-image="images/batur.jpg"></a>
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="images/batur.jpg" alt="thingstoDo">
+        </div>
+        <div class="content">
+          <h3>Boat trip</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price">€25.00</div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- footer section starts  -->
+
+  <section class="footer">
+
+    <div class="share">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+      <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+            <a href="index.html" class="active">Home</a>
+            <a href="#tripitinerary">Trip Itinerary</a>
+            <a href="pages/hotel.html">Hotels</a>
+            <a href="pages/thingstoDo.html">Things To Do</a>
+            <a href="pages/placestovisit.html">Places To Visit</a>
+            <a href="pages/events.html">Events</a>
+            <a href="pages/shopping.html">Shoping</a>
+            <a href="pages/restaurants.html">Restaurants</a>
+    </div>
+  </section>
+
+  <!-- footer section ends -->
+
+  <script src="js/script.js"></script>
+  <script src="js/buttoncart.js"></script>
+</body>
+</html>
