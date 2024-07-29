@@ -8,7 +8,7 @@
 <body>
   <header class="header">
     <a href="#" class="logo">
-      <img src="../images/logo.png" alt="Logo">
+      <img src="../images/travellogo.png" alt="Logo">
     </a>
     <nav class="navbar">
       <a href="../index.html">Home</a>
@@ -22,67 +22,31 @@
     </nav>
   </header>
 
-  <div id="demo"></div>
-  <div class="details" id="details-even">
-    <div class="place-box">
-      <div class="text">Valletta</div>
-    </div>
-    <div class="title-box-1"><div class="title-1">Capital</div></div>
-    <div class="title-box-2"><div class="title-2">city</div></div>
-    <div class="desc">
-      As Malta’s capital city, it is a commercial centre for shopping, bars, dining, and café life. It is also the southernmost capital of Europe and at just 0.61 square kilometres, it is the European Union's smallest capital city.
-    </div>
-    <div class="cta">
-      <button class="bookmark">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clip-rule="evenodd" />
-        </svg>
-      </button>
-      <a href="../pages/valletta.html" class="discover">Discover Location</a>
-    </div>
-  </div>
-
-  <div class="details" id="details-odd">
-    <div class="place-box">
-      <div class="text">Valletta</div>
-    </div>
-    <div class="title-box-1"><div class="title-1">Capital </div></div>
-    <div class="title-box-2"><div class="title-2">city</div></div>
-    <div class="desc">
-      As Malta’s capital city, it is a commercial centre for shopping, bars, dining, and café life. It is also the southernmost capital of Europe and at just 0.61 square kilometres, it is the European Union's smallest capital city.
-    </div>
-    <div class="cta">
-      <button class="bookmark">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clip-rule="evenodd" />
-        </svg>
-      </button>
-      <a href="../pages/valletta.html" class="discover">Discover Location</a>
-    </div>
-  </div>
-
-  <div class="pagination" id="pagination">
-    <div class="arrow arrow-left">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-      </svg>
-    </div>
-    <div class="arrow arrow-right">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-      </svg>
-    </div>
-    <div class="progress-sub-container">
-      <div class="progress-sub-background">
-        <div class="progress-sub-foreground"></div>
-      </div>
-    </div>
-    <div class="slide-numbers" id="slide-numbers"></div>
-  </div>
-
-  <div class="cover"></div>
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'></script>
+  <main>
+    <ul class='slider'>
+      <li class='item' style="background-image: url('../images/budavspest.jpg')">
+        <div class='content'>
+          <h2 class='title'>Budapest</h2>
+          <p class='description'> Búdapest er höfuðborg Ungverjalands. Árið 1873 sameinuðust borgirnar á bökkum Dónár, Buda á
+             hægri bakkanum og Pest á vinstri bakkanum í eina borg, Búdapest. Nú er borgin sú sjötta stærsta innan Evrópusambandisns. </p>
+          <button>Read More</button>
+        </div>
+      </li>
+      <li class='item' style="background-image: url('https://i.pinimg.com/564x/98/75/84/987584d40f4736e2c4ba21c0d668dddb.jpg')">
+        <div class='content'>
+          <h2 class='title'>Ungverjaland</h2>
+          <p class='description'> Ungverjaland er í Mið-Evrópu, rétt austan Alpafjalla.</p>
+        </div>
+      </li>
+    </ul>
+    <nav class='nav'>
+      <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+      <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+    </nav>
+  </main>
+  
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="../js/placestovisit.js"></script>
 </body>
 </html>

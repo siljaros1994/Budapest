@@ -278,8 +278,8 @@ main {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(../images/holiday-travel-background.jpg) no-repeat;
-  background-size: cover;
+  background: url(https://cdn.pixabay.com/photo/2024/06/18/04/33/travel-8836969_1280.jpg) no-repeat;
+  background-size: 100%;
   background-position: center;
 }
 
@@ -290,14 +290,14 @@ main {
 .home .content h3 {
   font-size: 6rem;
   text-transform: uppercase;
-  color: #0a0a0a;
+  color: #fbf6f6;
 }
 
 .home .content p {
   font-size: 2rem;
   line-height: 1.8;
   padding: 1rem 0;
-  color: #0a0a0a;
+  color: #f6f0f0;
 }
 
 .tripitinerary .row {
