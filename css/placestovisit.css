@@ -26,7 +26,6 @@ body {
   height: 100vh;
   display: grid;
   place-items: center;
-  overflow: hidden;
 }
 
 main {
@@ -97,9 +96,9 @@ main {
   transform: translate(-50%, -50%);
   z-index: 1;
   background-position: center;
-  background-size: contain; /* Ensures the image fits within the container without being zoomed in */
+  background-size: contain;
   background-repeat: no-repeat;
-  background-color: #000; /* Color to fill space not covered by the image */
+  background-color: #000;
   border-radius: 20px;
   box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
   transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
@@ -156,28 +155,28 @@ main {
   text-shadow: 0 3px 8px rgba(0,0,0,0.5);
   opacity: 0;
   display: none;
+}
 
-  & .title {
-    font-family: 'arial-black';
-    text-transform: uppercase;
-    font-size: 50px;
-  }
+.content .title {
+  font-family: 'arial-black';
+  text-transform: uppercase;
+  font-size: 50px;
+}
 
-  & .description {
-    line-height: 1.7;
-    margin: 1rem 0 1.5rem;
-    font-size: 20px;
-  }
+.content .description {
+  line-height: 1.7;
+  margin: 1rem 0 1.5rem;
+  font-size: 20px;
+}
 
-  & button {
-    width: fit-content;
-    background-color: rgba(0,0,0,0.1);
-    color: white;
-    border: 2px solid white;
-    border-radius: 0.25rem;
-    padding: 0.75rem;
-    cursor: pointer;
-  }
+.content button {
+  width: fit-content;
+  background-color: rgba(0,0,0,0.1);
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
 }
 
 .item:nth-of-type(2) .content {
@@ -203,56 +202,68 @@ main {
   transform: translateX(-50%);
   z-index: 5;
   user-select: none;
-
-  & .btn {
-    background-color: rgba(255,255,255,0.5);
-    color: rgba(0,0,0,0.7);
-    border: 2px solid rgba(0,0,0,0.6);
-    margin: 0 0.25rem;
-    padding: 0.75rem;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &:hover {
-      background-color: rgba(255,255,255,0.3);
-    }
-  }
 }
 
-/* Combined media queries */
+.nav .btn {
+  background-color: rgba(255,255,255,0.5);
+  color: rgba(0,0,0,0.7);
+  border: 2px solid rgba(0,0,0,0.6);
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav .btn:hover {
+  background-color: rgba(255,255,255,0.3);
+}
 
 @media (width > 650px) and (width < 900px) {
-  .content {
-    & .title        { font-size: 1rem; }
-    & .description  { font-size: 0.7rem; }
-    & button        { font-size: 0.7rem; }
+  .content .title {
+    font-size: 1rem;
   }
+
+  .content .description {
+    font-size: 0.7rem;
+  }
+
+  .content button {
+    font-size: 0.7rem;
+  }
+
   .item {
     width: 160px;
     height: 270px;
-
-    &:nth-child(3) { left: 50%; }
-    &:nth-child(4) { left: calc(50% + 170px); }
-    &:nth-child(5) { left: calc(50% + 340px); }
-    &:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
   }
+
+  .item:nth-child(3) { left: 50%; }
+  .item:nth-child(4) { left: calc(50% + 170px); }
+  .item:nth-child(5) { left: calc(50% + 340px); }
+  .item:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
 }
 
 @media (width < 650px) {
-  .content {
-    & .title        { font-size: 0.9rem; }
-    & .description  { font-size: 0.65rem; }
-    & button        { font-size: 0.7rem; }
+  .content .title {
+    font-size: 0.9rem;
   }
+
+  .content .description {
+    font-size: 0.65rem;
+  }
+
+  .content button {
+    font-size: 0.7rem;
+  }
+
   .item {
     width: 130px;
     height: 220px;
-
-    &:nth-child(3) { left: 50%; }
-    &:nth-child(4) { left: calc(50% + 140px); }
-    &:nth-child(5) { left: calc(50% + 280px); }
-    &:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
   }
+
+  .item:nth-child(3) { left: 50%; }
+  .item:nth-child(4) { left: calc(50% + 140px); }
+  .item:nth-child(5) { left: calc(50% + 280px); }
+  .item:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
 }
 
 @media (max-width: 991px) {
