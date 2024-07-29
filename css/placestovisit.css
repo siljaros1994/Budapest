@@ -84,22 +84,25 @@ main {
 }
 
 .item {
-  width: 200px;
-  height: 300px;
+  width: 50%;
+  height: 120px;
+  border: 5px solid black;
+  padding-left: 50px;
+  padding-top: 50px;
+  margin-top: 97px;
   list-style-type: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Miðja ílátin bæði lárétt og lóðrétt */
+  transform: translate(-50%, -50%);
   z-index: 1;
   background-position: center;
-  background-size: contain; /* Fyllir ílátin án þess að aflaga myndir */
+  background-size: contain; /* Ensures the image fits within the container without being zoomed in */
   background-repeat: no-repeat;
-  background-color: #000; /* Litur til að fylla pláss sem myndin nær ekki yfir */
+  background-color: #000; /* Color to fill space not covered by the image */
   border-radius: 20px;
   box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
   transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
-  object-fit: cover;
 }
 
 .item:nth-child(1),
@@ -119,6 +122,29 @@ main {
 .item:nth-child(5) { left: calc(50% + 440px); }
 .item:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
 
+.btn {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 1em 2em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: red;
+  color: black;
+  border-radius: 25px;
+  border: red;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+
+.title span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
 .content {
   width: min(30vw,400px);
   position: absolute;
@@ -134,12 +160,13 @@ main {
   & .title {
     font-family: 'arial-black';
     text-transform: uppercase;
+    font-size: 50px;
   }
 
   & .description {
     line-height: 1.7;
     margin: 1rem 0 1.5rem;
-    font-size: 0.8rem;
+    font-size: 20px;
   }
 
   & button {
