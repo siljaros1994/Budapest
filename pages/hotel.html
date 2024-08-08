@@ -61,6 +61,7 @@
           </div>
         </div>
       </div>
+
       <div class="card">
         <div id="slider2" class="slider slideshow__container">
           <img v-for="(slide, index) in otherSlides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
@@ -90,6 +91,7 @@
           </div>
         </div>
       </div>
+
       <div class="card">
         <div id="slider3" class="slider slideshow__container">
           <img v-for="(slide, index) in nextSlides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
@@ -119,7 +121,7 @@
 
         <div class="card">
           <div id="slider4" class="slider slideshow__container">
-            <img v-for="(slide, index) in nextSlides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
+            <img v-for="(slide, index) in lastSlides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
           </div>
   
           <div class="content">

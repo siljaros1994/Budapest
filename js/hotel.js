@@ -75,6 +75,7 @@ new Vue({
       this.startRotation();
     }
   });
+
   new Vue({
     el: '#slider3',
     data: {
@@ -109,11 +110,12 @@ new Vue({
       this.startRotation();
     }
   }); 
+
   new Vue({
     el: '#slider4',
     data: {
       current: 0,
-      nextSlides: [
+      lastSlides: [
         { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320322066.jpg?k=7d08a1383424e0dfb9a7d84374a2b39c12a772842c60da718eef079bf592efa9&o=&hp=1', title: 'Hotel image 1' },
         { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320322400.jpg?k=6b748fc0e16e4cb343f0c2240396f28e6f98be536cce259d5e4ae06435bb41b1&o=&hp=1', title: 'Hotel Image 2' },
         { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320322398.jpg?k=ad3d6c3fcd9a4f942c4bb425b017996d7f8330e146584ac8d7e195bc24ba8aaf&o=&hp=1', title: 'Hotel Image 3' },
