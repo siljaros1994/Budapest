@@ -55,8 +55,8 @@
             <ul>
               <li>Líkamsræktarstöð</li>
               <li>Bar</li>
-              <li>herbergisþjónustu</li>
-              <li>veitingastað</li>
+              <li>Herbergisþjónusta</li>
+              <li>Veitingastaður</li>
             </ul>
           </div>
         </div>
@@ -73,7 +73,7 @@
             <p> Hótelið opnaði árið 2012 og býður upp á flott loftkæld herbergi og veitingastað í norðurhluta Búdapest. Þráðlaust net er í boði ókeypis.
               Öll herbergin eru innréttuð í skærum litum og búin flatskjásjónvarpi og öryggishólfi. Sérbaðherbergið er með sturtu og hárþurrku og í sumum 
               herbergjanna eru ókeypis snyrtivörur. Veitingastaðurinn hefur verið hannaður í samræmi við nýjustu strauma og hann býður upp á ungverska og
-               alþjóðlega matargerð. Park Inn By Radisson Budapest er einnig með bar sem býður upp á kaffi og bragðgóða kokteila.Duna Plaza-verslunarmiðstöðin
+               alþjóðlega matargerð. Park Inn By Radisson Budapest er einnig með bar sem býður upp á kaffi og bragðgóða kokteila. Duna Plaza-verslunarmiðstöðin
                 er í 500 metra fjarlægð sem og Gyöngyösi utca M3-neðanjarðarlestarstöðin sem tekur þig í miðbæinn á innan við 15 mínútum. 
                 Liszt Ferenc-alþjóðaflugvöllurinn er í 22 km fjarlægð. Hajógyari-eyjan, sem hýsir hið fræga Sziget Fesztival, er í 5 km fjarlægð frá húsnæðinu.
             </p>
@@ -84,7 +84,7 @@
             <h3>Features</h3>
             <ul>
               <li>Líkamsræktarstöð</li>
-              <li>herbergisþjónustu</li>
+              <li>Herbergisþjónusta</li>
               <li>Veitingastaðir</li>
               <li>Ókeypis WiFi</li>
             </ul>
@@ -100,10 +100,10 @@
         <div class="content">
           <div class="description">
             <h1>Vagabond Downtown</h1>
-            <p> íbúðarhótel sem býður upp á gistingu í Búdapest, í 1,1 km fjarlægð frá Ríkisóperunni.Einingarnar eru með parketgólf, setusvæði með flatskjá 
+            <p> Íbúðarhótel sem býður upp á gistingu í Búdapest, í 1,1 km fjarlægð frá Ríkisóperunni. Einingarnar eru með parketgólf, setusvæði með flatskjá 
               með kapalrásum, fullbúið eldhús með borðkrók og sérbaðherbergi. Einnig eru til staðar ofn, örbylgjuofn og kaffivél. Íbúðahótelið er með verönd.
               Basilíka heilags Stefáns er 1,1 km frá Vagabond Downtown, en House of Terror er 1,4 km í burtu. Næsti flugvöllur er Budapest Ferenc 
-              Liszt-alþjóðaflugvöllur, 22 km frá gististaðnum.Hluti af hótelkeðju Fússunarlausar.
+              Liszt-alþjóðaflugvöllur, 22 km frá gististaðnum. Hluti af hótelkeðju Fússunarlausar.
             </p>
             <p>
               Þetta er 5 stjörnu hótel með 9,2 í einkunn. Kostnaður við 1 stórt hjónarúm fyrir 1 er 61.660 kr. 
@@ -118,37 +118,35 @@
             </ul>
           </div>
         </div>
+      </div> <!-- Make sure to close the last .card div here -->
 
-        <div class="card">
-          <div id="slider4" class="slider slideshow__container">
-            <img v-for="(slide, index) in lastSlides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
-          </div>
-  
-          <div class="content">
-            <div class="description">
-              <h1>B&B Hotel Budapest City</h1>
-              <p> Hotel er staðsett á besta stað í miðbæ Búdapest og býður upp á loftkæld herbergi, heilsuræktarstöð, ókeypis WiFi og verönd. 
-                Þetta 3-stjörnu hótel býður upp á sólarhringsmóttöku og alhliða móttökuþjónustu. Gestir geta notið ítalskra rétta og rétta frá 
-                Pítsu á veitingastaðnum eða fengið sér kokkteil á barnum. Allar einingar hótelsins eru með setusvæði, flatskjá með gervihnattarásum
-                 og sérbaðherbergi með ókeypis snyrtivörum og sturtu. Öll herbergin eru með skrifborð. Morgunverðarhlaðborð, léttur morgunverður
-                  eða grænmetismorgunverður er í boði daglega á gististaðnum. Ungverska þjóðminjasafnið er 1,6 km frá B&B Hotel Budapest City og
-                   Dohany-stræti er í 3 km fjarlægð. Næsti flugvöllur er Budapest Ferenc Liszt-alþjóðaflugvöllur, 12 km frá gististaðnum.
-              </p>
-              <p>
-                Þetta er 3 stjörnu hótel með 8,7 í einkunn. Kostnaður við 1 stórt hjónarúm fyrir 1 með morgunmat er 60.275 kr. 
-                Kostnaður við 2 einstaklings rúm fyrir 2 með morgunmat er 54.329 kr.
-              </p>
-              <h3>Features</h3>
-              <ul>
-                <li>Sólarhringsmóttaka</li>
-                <li>Líkamsræktarstöð</li>
-                <li>Garður og bar</li>
-                <li>Ókeypis WiFi</li>
-              </ul>
-            </div>
-          </div>
+      <div class="card">
+        <div id="slider4" class="slider slideshow__container">
+          <img v-for="(slide, index) in lastSlides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
+        </div>
 
-      </div>
+        <div class="content">
+          <div class="description">
+            <h1>B&B Hotel Budapest City</h1>
+            <p> Hotel er staðsett á besta stað í miðbæ Búdapest og býður upp á loftkæld herbergi, sameiginlega setustofu, ókeypis WiFi
+              og verönd. Öll herbergin eru með flatskjásjónvarp með kapalrásum, kaffivél, skrifborð, sérbaðherbergi með sturtu og hárþurrku.
+              Á staðnum er bar, móttaka og aðgengi fyrir hreyfihamlaða. Einfaldari gististaður en tilvalinn fyrir þá sem vilja spara.
+            </p>
+            <p>
+              Þetta er 3 stjörnu hótel með 7,9 í einkunn. Kostnaður við 1 stórt hjónarúm fyrir 1 með morgunmat er 47.100 kr.
+              Kostnaður við 2 einstaklings rúm fyrir 2 með morgunmat er 51.800 kr.
+            </p>
+            <h3>Features</h3>
+            <ul>
+              <li>Sólarhringsmóttaka</li>
+              <li>Bar</li>
+              <li>Lyfta</li>
+              <li>Ókeypis WiFi</li>
+            </ul>
+          </div>
+        </div>
+      </div> <!-- Make sure to close the last .card div here -->
+
     </div>
   </main>
 
