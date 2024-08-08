@@ -138,7 +138,7 @@ new Vue({
         this.timer = setInterval(this.next, this.speed);
       },
       next() {
-        this.current = (this.current + 1) % this.nextSlides.length;
+        this.current = (this.current + 1) % this.lastSlides.length;
       },
       isActive(index) {
         return this.current === index;
@@ -147,4 +147,5 @@ new Vue({
     created() {
       this.startRotation();
     }
-  }); 
+  });
+  
