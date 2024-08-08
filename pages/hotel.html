@@ -98,7 +98,7 @@
         <div class="content">
           <div class="description">
             <h1>Vagabond Downtown</h1>
-            <p> Hotel býður upp á gistingu í Búdapest, í 1,1 km fjarlægð frá Ríkisóperunni.Einingarnar eru með parketgólf, setusvæði með flatskjá 
+            <p> íbúðarhótel sem býður upp á gistingu í Búdapest, í 1,1 km fjarlægð frá Ríkisóperunni.Einingarnar eru með parketgólf, setusvæði með flatskjá 
               með kapalrásum, fullbúið eldhús með borðkrók og sérbaðherbergi. Einnig eru til staðar ofn, örbylgjuofn og kaffivél. Íbúðahótelið er með verönd.
               Basilíka heilags Stefáns er 1,1 km frá Vagabond Downtown, en House of Terror er 1,4 km í burtu. Næsti flugvöllur er Budapest Ferenc 
               Liszt-alþjóðaflugvöllur, 22 km frá gististaðnum.Hluti af hótelkeðju Fússunarlausar.
@@ -116,6 +116,36 @@
             </ul>
           </div>
         </div>
+
+        <div class="card">
+          <div id="slider4" class="slider slideshow__container">
+            <img v-for="(slide, index) in nextSlides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
+          </div>
+  
+          <div class="content">
+            <div class="description">
+              <h1>B&B Hotel Budapest City</h1>
+              <p> Hotel er staðsett á besta stað í miðbæ Búdapest og býður upp á loftkæld herbergi, heilsuræktarstöð, ókeypis WiFi og verönd. 
+                Þetta 3-stjörnu hótel býður upp á sólarhringsmóttöku og alhliða móttökuþjónustu. Gestir geta notið ítalskra rétta og rétta frá 
+                Pítsu á veitingastaðnum eða fengið sér kokkteil á barnum. Allar einingar hótelsins eru með setusvæði, flatskjá með gervihnattarásum
+                 og sérbaðherbergi með ókeypis snyrtivörum og sturtu. Öll herbergin eru með skrifborð. Morgunverðarhlaðborð, léttur morgunverður
+                  eða grænmetismorgunverður er í boði daglega á gististaðnum. Ungverska þjóðminjasafnið er 1,6 km frá B&B Hotel Budapest City og
+                   Dohany-stræti er í 3 km fjarlægð. Næsti flugvöllur er Budapest Ferenc Liszt-alþjóðaflugvöllur, 12 km frá gististaðnum.
+              </p>
+              <p>
+                Þetta er 3 stjörnu hótel með 8,7 í einkunn. Kostnaður við 1 stórt hjónarúm fyrir 1 með morgunmat er 60.275 kr. 
+                Kostnaður við 2 einstaklings rúm fyrir 2 með morgunmat er 54.329 kr.
+              </p>
+              <h3>Features</h3>
+              <ul>
+                <li>Sólarhringsmóttaka</li>
+                <li>Líkamsræktarstöð</li>
+                <li>Garður og bar</li>
+                <li>Ókeypis WiFi</li>
+              </ul>
+            </div>
+          </div>
+
       </div>
     </div>
   </main>

@@ -109,3 +109,40 @@ new Vue({
       this.startRotation();
     }
   }); 
+  new Vue({
+    el: '#slider4',
+    data: {
+      current: 0,
+      nextSlides: [
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320322066.jpg?k=7d08a1383424e0dfb9a7d84374a2b39c12a772842c60da718eef079bf592efa9&o=&hp=1', title: 'Hotel image 1' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320322400.jpg?k=6b748fc0e16e4cb343f0c2240396f28e6f98be536cce259d5e4ae06435bb41b1&o=&hp=1', title: 'Hotel Image 2' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320322398.jpg?k=ad3d6c3fcd9a4f942c4bb425b017996d7f8330e146584ac8d7e195bc24ba8aaf&o=&hp=1', title: 'Hotel Image 3' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320322387.jpg?k=1e2cc210600f25bcf219628ebf58db0129a9b177c9c6741a1b789c8403c24b23&o=&hp=1', title: 'Hotel Image 4' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320309231.jpg?k=96ffdf81c7436574329eb8c16d6bfa4421e813cf5d38c9419855fcb2c5e93d04&o=&hp=1', title: 'Hotel image 5' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320310578.jpg?k=cebd01849f105616446399182386b8399653e2747bd91990287585941ef2ce52&o=&hp=1', title: 'Hotel Image 6' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320307903.jpg?k=cab645bccf7fa6629eac9447f7502b64761877893ba46fc2462ef5360b0353cd&o=&hp=1', title: 'Hotel Image 7' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320308491.jpg?k=35562ed65e75b6dfa203e056b9d9fc236d6b3172ed902ce4429b13fa6ea55917&o=&hp=1', title: 'Hotel image 8' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320322379.jpg?k=0c4962a92ffb55b43d292fe8f40f706e6fad77c888f3d9ce419010aba7c384a5&o=&hp=1', title: 'Hotel Image 9' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/322723475.jpg?k=c38f0eb3e2bd21dd2b0d213a700107a9cefa01881fcd855810d2aeea79cd9aa0&o=&hp=1', title: 'Hotel Image 10' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320347830.jpg?k=a57ef52eae859ef83192ee3c550526891d4196237b8a2f4e982207039eafb5b2&o=&hp=1', title: 'Hotel Image 11' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/322723472.jpg?k=bd39e0aa74869d43405ff746910bd078e7556cfd173223299eb7e659b83c8de1&o=&hp=1', title: 'Hotel Image 12' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/320322384.jpg?k=595ebb5002ab1ea90345fa28656678517e6a405c96fca3e4b326cd41fb603c5d&o=&hp=1', title: 'Hotel Image 13' },
+      ],
+      speed: 3000,
+      timer: null
+    },
+    methods: {
+      startRotation() {
+        this.timer = setInterval(this.next, this.speed);
+      },
+      next() {
+        this.current = (this.current + 1) % this.nextSlides.length;
+      },
+      isActive(index) {
+        return this.current === index;
+      }
+    },
+    created() {
+      this.startRotation();
+    }
+  }); 
