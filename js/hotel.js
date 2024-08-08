@@ -1,7 +1,7 @@
 new Vue({
-    el: '.js-slideshow',
-    data: {
-      current: 0,
+  el: '#slider1',
+  data: {
+    current: 0,
       slides: [
         { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/495457675.jpg?k=23a08d600a347fa8cc8fce138387793c55994471ff151e5f513e97d3419245a5&o=&hp=1', title: 'Hotel Image 1' },
         { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/504309139.jpg?k=25c71de14a720c6f0c999e5b1e970172797910d8cab1a264393b93ad801e9ae0&o=&hp=1', title: 'Hotel Image 2' },
@@ -17,31 +17,95 @@ new Vue({
         { id: 12, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/486674705.jpg?k=917ca76fbf5075fd62becab0969bb1a16a6bbf169079d5f54f1480b1b6fc4c07&o=&hp=1', title: 'Hotel Image 12' },
         { id: 13, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/496433089.jpg?k=1126656b9f5436108a017605cf0dd7c0afbfea63256f9c04e9e21773b78dbaf6&o=&hp=1', title: 'Hotel Image 13' },
       ],
+      timer: null,
+      speed: 3000
+    },
+    methods: {
+      startRotation() {
+        this.timer = setInterval(this.next, this.speed);
+      },
+      next() {
+        this.current = (this.current + 1) % this.slides.length;
+      },
+      isActive(index) {
+        return this.current === index;
+      }
+    },
+    created() {
+      this.startRotation();
+    }
+  });
+
+  new Vue({
+    el: '#slider2',
+    data: {
+      current: 0,
+      otherSlides: [
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/250830726.jpg?k=79ead5935f6d4d2eb8792cb8c910b594b630a8b7dc37646b235dd3412609161e&o=&hp=1', title: 'Hotel Image 1' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/120208547.jpg?k=315cce8e29b8a15fb31f68584d8daa7a067b21f93c77162ff1ed41331cd662b9&o=&hp=1', title: 'Hotel Image 2' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/432297247.jpg?k=0bfd25adc19b4f1181311f741c58f71d80a128e2b52f271529f284ff7892a97e&o=&hp=1', title: 'Hotel Image 3' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/432297245.jpg?k=233ffdc68628b4dc1e94317a5b847b090462ead83da1f2358ffed4c1e75e51bf&o=&hp=1', title: 'Hotel Image 4' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/247910572.jpg?k=4dc542d523e8ca833718d014a833cd5dcbddc75b9eff02d3261eed78e108b16a&o=&hp=1', title: 'Hotel Image 5' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/247910584.jpg?k=c556238e9c5ac48f465387fb83be4179477a333b559f05f68e657181809b4d90&o=&hp=1', title: 'Hotel Image 6' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/247910573.jpg?k=470f777ead80580dc10c2f20a049228a9c903b0848f0819135768dd6d440cbaa&o=&hp=1', title: 'Hotel Image 7' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/247910582.jpg?k=a7710ed999b228c33919f9f30ed3228d14f283e0b42b7486607a09b3e204aca6&o=&hp=1', title: 'Hotel Image 8' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/247910577.jpg?k=5138f305862f089531df881e304fd3ab495d043d5cda12b25535d853aced73c9&o=&hp=1', title: 'Hotel Image 9' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/247910586.jpg?k=47211a115d31ea4adf4d79aeaa1e5e29868ab421372b52829e3e44cfb34bfaed&o=&hp=1', title: 'Hotel Image 10' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/564113558.jpg?k=19198729fbfe46d6227adac973811a7120cf133ac179280d3dba0f9140327607&o=&hp=1', title: 'Hotel Image 11' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/432297257.jpg?k=ac7e5a78c81f83b9d4a84291698536d7f758292c14745fd3930f71bc91d214d8&o=&hp=1', title: 'Hotel Image 12' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/249943157.jpg?k=c3b20448988d1f8e0a0cc95fa7e6b6d56587be10d8bb08db1cad046e627ef431&o=&hp=1', title: 'Hotel Image 13' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/232829514.jpg?k=fc40f469fa0f5b4aec4e5d2a115f1f4ab9b5fdad42b6649f16175a7bdbe3cecf&o=&hp=1', title: 'Hotel Image 14' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/232828633.jpg?k=ed9f00b54e7328fccc7833a0822a35045385527c74750855890baf3c346fa0c9&o=&hp=1', title: 'Hotel Image 15' },
+      ],
+      timer: null,
+      speed: 3000
+    },
+    methods: {
+      startRotation() {
+        this.timer = setInterval(this.next, this.speed);
+      },
+      next() {
+        this.current = (this.current + 1) % this.otherSlides.length;
+      },
+      isActive(index) {
+        return this.current === index;
+      }
+    },
+    created() {
+      this.startRotation();
+    }
+  });
+  new Vue({
+    el: '#slider3',
+    data: {
+      current: 0,
+      nextSlides: [
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/471002102.jpg?k=201f67f258c986d1f5e0db2919348e783a9b1f04174cb3a0ec2e795e5a1c7a91&o=&hp=1', title: 'Hotel California Image 1' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/177576152.jpg?k=1f174b6bbeed3cb67244c461b77b59298a20f34f9f436e837458ad7fc73c4ce7&o=&hp=1', title: 'Hotel California Image 2' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/457941819.jpg?k=e875f8d96e2756594d70f2c4456eb737adc76a8558836aebbe19998f1aff7ca5&o=&hp=1', title: 'Hotel California Image 3' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/457942348.jpg?k=feac9e321050dcd728978afcc70b3dba0c2e12f27604fb7075073435f7546acb&o=&hp=1', title: 'Hotel California Image 4' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/457942463.jpg?k=3fdb4bd3c0cf220969c0795fcf9124b7e9c284550cd10bb6c4a5103250463e1c&o=&hp=1', title: 'Hotel California Image 5' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/547180850.jpg?k=15c04f9a51276bb9d3eda7f0e27db778e442547dceea90cfa91f1773e864662a&o=&hp=1', title: 'Hotel California Image 6' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/326316927.jpg?k=9021cbc8ddf5e8e08b6b6895cd4d08346abc6bb548c55a79e2291a6bf5000c88&o=&hp=1', title: 'Hotel California Image 7' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/586809690.jpg?k=34fb43460c4c0766a75f1bbd42e4facec6682c373a8bbd28afe8085ef8c61b23&o=&hp=1', title: 'Hotel California Image 8' },
+        { id: 1, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/198891149.jpg?k=8276fced84507cdd08edb130de5f4e5384c69162f536e96796a994a938d0c80a&o=&hp=1', title: 'Hotel California Image 9' },
+        { id: 2, url: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/264148981.jpg?k=d61a9801d0e6c862339d2565ce20d6849e2fd2b1aa90fbc114ca22cf5821ca4c&o=&hp=1', title: 'Hotel California Image 10' },
+      ],
       speed: 3000,
       timer: null
     },
     methods: {
-      startRotation: function () {
+      startRotation() {
         this.timer = setInterval(this.next, this.speed);
       },
-      stopRotation: function () {
-        clearTimeout(this.timer);
-        this.timer = null;
+      next() {
+        this.current = (this.current + 1) % this.nextSlides.length;
       },
-      next: function () {
-        var current = this.current;
-        var next = current + 1;
-  
-        if (next > this.slides.length - 1) {
-          next = 0;
-        }
-        this.current = next;
-      },
-      isActive: function (index) {
+      isActive(index) {
         return this.current === index;
       }
     },
-    created: function () {
+    created() {
       this.startRotation();
     }
-  });  
+  }); 

@@ -32,7 +32,7 @@
     
     <div class="container">
       <div class="card">
-        <div class="slider slideshow__container js-slideshow">
+        <div id="slider1" class="slider slideshow__container">
           <img v-for="(slide, index) in slides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
         </div>
 
@@ -57,6 +57,62 @@
               <li>Bar</li>
               <li>herbergisþjónustu</li>
               <li>veitingastað</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div id="slider2" class="slider slideshow__container">
+          <img v-for="(slide, index) in otherSlides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
+        </div>
+
+        <div class="content">
+          <div class="description">
+            <h1>Park Inn By Radisson Budapest</h1>
+            <p> Hótelið opnaði árið 2012 og býður upp á flott loftkæld herbergi og veitingastað í norðurhluta Búdapest. Þráðlaust net er í boði ókeypis.
+              Öll herbergin eru innréttuð í skærum litum og búin flatskjásjónvarpi og öryggishólfi. Sérbaðherbergið er með sturtu og hárþurrku og í sumum 
+              herbergjanna eru ókeypis snyrtivörur. Veitingastaðurinn hefur verið hannaður í samræmi við nýjustu strauma og hann býður upp á ungverska og
+               alþjóðlega matargerð. Park Inn By Radisson Budapest er einnig með bar sem býður upp á kaffi og bragðgóða kokteila.Duna Plaza-verslunarmiðstöðin
+                er í 500 metra fjarlægð sem og Gyöngyösi utca M3-neðanjarðarlestarstöðin sem tekur þig í miðbæinn á innan við 15 mínútum. 
+                Liszt Ferenc-alþjóðaflugvöllurinn er í 22 km fjarlægð. Hajógyari-eyjan, sem hýsir hið fræga Sziget Fesztival, er í 5 km fjarlægð frá húsnæðinu.
+            </p>
+            <p>
+              Þetta er 4 stjörnu hótel með 8,4 í einkunn. Kostnaður við 1 stórt hjónarúm fyrir 1 með morgunmat er 79.380 kr. 
+              Kostnaður við 2 einstaklings rúm fyrir 2 með morgunmat er 72.740 kr.
+            </p>
+            <h3>Features</h3>
+            <ul>
+              <li>Líkamsræktarstöð</li>
+              <li>herbergisþjónustu</li>
+              <li>Veitingastaðir</li>
+              <li>Ókeypis WiFi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div id="slider3" class="slider slideshow__container">
+          <img v-for="(slide, index) in nextSlides" :key="slide.id" :src="slide.url" :alt="slide.title" :class="{ active: isActive(index) }">
+        </div>
+
+        <div class="content">
+          <div class="description">
+            <h1>Vagabond Downtown</h1>
+            <p> Hotel býður upp á gistingu í Búdapest, í 1,1 km fjarlægð frá Ríkisóperunni.Einingarnar eru með parketgólf, setusvæði með flatskjá 
+              með kapalrásum, fullbúið eldhús með borðkrók og sérbaðherbergi. Einnig eru til staðar ofn, örbylgjuofn og kaffivél. Íbúðahótelið er með verönd.
+              Basilíka heilags Stefáns er 1,1 km frá Vagabond Downtown, en House of Terror er 1,4 km í burtu. Næsti flugvöllur er Budapest Ferenc 
+              Liszt-alþjóðaflugvöllur, 22 km frá gististaðnum.Hluti af hótelkeðju Fússunarlausar.
+            </p>
+            <p>
+              Þetta er 5 stjörnu hótel með 9,2 í einkunn. Kostnaður við 1 stórt hjónarúm fyrir 1 er 61.660 kr. 
+              Kostnaður við 2 einstaklings rúm fyrir 2 er 62.920 kr.
+            </p>
+            <h3>Features</h3>
+            <ul>
+              <li>Sólarhringsmóttaka</li>
+              <li>Verönd og lyfta</li>
+              <li>Garður</li>
+              <li>Ókeypis WiFi</li>
             </ul>
           </div>
         </div>
